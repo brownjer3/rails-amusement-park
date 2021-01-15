@@ -1,0 +1,12 @@
+<% if flash[:message] %>
+    <p><%= flash[:message] %></p>
+<% end %>
+
+<%= "ADMIN" if @user.admin %>
+
+Name: <%= @user.name %>
+Mood: <%= @user.mood %>
+Height: <%= @user.height %>
+Tickets: <%= @user.tickets %>
+
+<%= link_to "See attractions", attractions_path %>
